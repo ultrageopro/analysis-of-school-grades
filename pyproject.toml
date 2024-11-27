@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "analysis-of-school-grades"
+version = "0.1.0"
+description = "Analyze schoolchildren's grades and see if it is possible to predict new grades based on old ones"
+authors = ["ultrageopro <dev@ultrageopro.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+lint.select = ["ALL"] # Enable all available linters
+
+preview = true # Enable preview features
+
+# Im not sure i want to explain all of this
+lint.ignore = [
+    "TD002",
+    "TD003",
+    "FIX002",
+    "D101",
+    "RUF003",
+    "RUF002",
+    "RUF001",
+    "S311",
+    "CPY",
+    "S104"
+]
+
+# My personal preferences
+line-length = 88
+indent-width = 4
+
+[tool.mypy] # Mypy configuration required for type checking
+python_version = "3.12"
+strict = true
+
+ignore_missing_imports = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+warn_unused_ignores = true
+show_error_codes = true
+
+disable_error_code = ["import-untyped", "misc", "no-any-return", "name-defined"]
