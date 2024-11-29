@@ -1,10 +1,11 @@
 [tool.poetry]
-name = "analysis-of-school-grades"
+name = "analysis-of-school-grades-school-essay"
 version = "0.1.0"
-description = "Analyze schoolchildren's grades and see if it is possible to predict new grades based on old ones"
+description = "My 11-grade project!!!"
 authors = ["ultrageopro <dev@ultrageopro.ru>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -19,6 +20,7 @@ ipykernel = "^6.29.5"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
 
 [tool.ruff]
 lint.select = ["ALL"] # Enable all available linters
@@ -36,7 +38,8 @@ lint.ignore = [
     "RUF001",
     "S311",
     "CPY",
-    "S104"
+    "S104",
+    "T201" # print is allowed because this is analysis of school grades
 ]
 
 # My personal preferences
